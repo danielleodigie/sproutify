@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprout-ify: Grow Your Music Tastes</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/index.css')}}">
+</head>
+<body>
+    <div id="container">
+        <img src="{{ url_for('static', filename='sprout.png')}}">
+        <h1>Welcome to Sprout-ify</h1>
+        <p>Connect your Spotify and discover music tailored to your taste. Create personalized playlists based on your listening habits and explore new songs and artists.</p>
+        <a href="/login" id="login">Login with Spotify</a>
+    </div>
+    <footer>
+        <a href="https://github.com/coms-w3132/final-project-danielleodigie" target="_blank">View on GitHub</a>
+    </footer>
+</body>
+</html>

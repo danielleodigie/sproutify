@@ -1,0 +1,76 @@
+
+body{
+    background-color: #F5EFE6;
+    text-align: center;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+.card {
+    background-color: #E8DFCA;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: 15%; 
+    text-align: center;
+}
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.card h2 {
+    color: #1A4D2E;
+}
+
+/* Style for the form */
+form {
+    background-color: #1A4D2E;
+    padding: 40px 20px;
+    margin: 20px auto;
+    width: 50%; 
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #F5EFE6;
+
+}
+fieldset {
+    border: none;
+}
+label, input, legend {
+    font-size: 16px;
+}
+input[type="submit"] {
+    background-color: #E8DFCA;
+    color: #1A4D2E;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    color: #4F6F52;
+}
+
+h3{
+    color: #4F6F52;
+    font-size: 24px;
+}
+
+#h2text{
+    color: #4F6F52;
+    font-size: 36px;
+}
+
+h1{
+    color: #1A4D2E;
+    font-size: 48px;
+}
+
+form p label{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/sprout.css')}}">
+    <title>Let's Sprout</title>
+</head>
+
+<body>
+
+    <h1>Hey, {{display_name}}! </h1>
+    <h2 id="h2text">Here are your top artists...</h2>
+    <div class="cards">
+        {% for item in top_artists %}
+        <div class="card">
+            <img src={{ item['images'][0]['url'] }} alt="Artist Image">
+            <h2>{{ item['name'] }}</h2>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h2 id="h2text">and here are your top tracks!</h2>
+    <div class="cards">
+        {% for item in top_tracks %}
+        <div class="card">
+            <img src={{ item['album']['images'][0]['url'] }} alt="Track Image">
+            <h2>{{ item['name'] }} by {{ item['artists'][0]['name'] }}</h2>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h3>Now that you know a bit about your taste, let's find something new for you! Choose your branch, and let's explore!</h3>
+
+    <form action="/create" method="post">
+        <fieldset>
+            <legend>Customize Your Playlist</legend>
+            <p>
+                <label>Which branch would you like to choose?:</label><br>
+                <input type="radio" id="genre" name="branch" value="genre" required>
+                <label for="genre">Genre branch</label><br>
+                <input type="radio" id="artist" name="branch" value="artist">
+                <label for="artist">Artist branch</label><br>
+                <input type="radio" id="bpm" name="branch" value="bpm">
+                <label for="bpm">BPM branch</label>
+            </p>
+            <p>
+                <label for="playlist-name">Give your playlist a name!:</label><br>
+                <input type="text" id="playlist-name" name="playlist_name" required>
+            </p>
+            <p>
+                <label for="num-tracks">Number of tracks? (5-30):</label><br>
+                <input type="number" id="num-tracks" name="num_tracks" min="5" max="30" required>
+            </p>
+            <p>
+                <input type="submit" value="Create Playlist">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
